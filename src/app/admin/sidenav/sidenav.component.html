@@ -1,0 +1,72 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a [routerLink]="['#']" routerLinkActive="active" class="brand-link">
+        <img src="../../../assets/logo/prof.png" alt="employee" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a routerLink="/employees" routerLinkActive="active" class="nav-link">
+                        <fa-icon [icon]="faUsers"></fa-icon>
+                        <p>
+                            Manage Employees
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/payrolls']" routerLinkActive="active" class="nav-link">
+                        <fa-icon [icon]="faMoneyBillWave "></fa-icon>
+                        <p>
+                            Manage Payroll
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a [routerLink]="['/leaves']" routerLinkActive="active" class="nav-link ">
+                        <fa-icon [icon]="faHollyBerry "></fa-icon>
+                        <p>
+                            Manage Leaves
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a [routerLink]="['/revenues']" routerLinkActive="active" class="nav-link ">
+                        <fa-icon [icon]="faMoneyCheck "></fa-icon>
+                        <p>
+                            Revenues
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/expenses" routerLinkActive="active" class="nav-link">
+                        <fa-icon [icon]="faFileInvoiceDollar "></fa-icon>
+                        <p>
+                            Expenses
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/reports" routerLinkActive="active" class="nav-link">
+                        <fa-icon [icon]="faFileExcel "></fa-icon>
+                        <p>
+                            Financial Reports
+                        </p>
+                    </a>
+
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
