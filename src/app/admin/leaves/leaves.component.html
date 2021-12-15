@@ -1,6 +1,54 @@
 <!-- Navbar -->
 <app-navbar></app-navbar>
 <!-- /.navbar -->
-
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid mt-4">
+            <div class="card">
+                <div class="card-title">My title</div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead class="bg-secondary">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Leave Name</th>
+                                <th scope="col">Leave Type</th>
+                                <th scope="col">Application Date</th>
+                                <th scope="col">Milestone</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let leave of leaves; let i=index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{leave.leave_name}}</td>
+                                <td>{{leave.leave_type}}</td>
+                                <td>{{leave.created_at | date}}</td>
+                                <td *ngIf="leave.pending == false">
+                                    <button class="btn btn-sm btn-warning btn-block rounded-0" [disabled]="true">Pending</button>
+                                </td>
+                                <td *ngIf="leave.pending == true">
+                                    <button class="btn btn-sm btn-primary  btn-block rounded-0" [disabled]="false">Approved</button>
+                                </td>
+                                <td *ngIf="leave.pending == true">
+                                    <span class="ml-5">
+                                      <button class="btn btn-sm btn-success rounded-0" [disabled]="true">Approve</button>
+                                      <button class="btn btn-sm btn-danger rounded-0" [disabled]="true">Reject</button>
+                                    </span>
+                                </td>
+                                <td *ngIf="leave.pending == false">
+                                    <span class="ml-5">
+                                        <button class="btn btn-sm btn-success rounded-0">Approve</button>
+                                        <button class="btn btn-sm btn-danger rounded-0">Reject</button>
+                                      </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 <!-- Main Sidebar Container -->
 <app-sidenav></app-sidenav>

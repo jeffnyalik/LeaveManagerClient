@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -23,7 +24,6 @@ import { RevenuesComponent } from './revenues/revenues.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SnippetComponent } from './snippet/snippet.component';
 import { SpinnerComponent } from './spinner/spinner.component';
-
 
 @NgModule({
   declarations: [
@@ -50,8 +50,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
   imports: [
     CommonModule,
     AppRoutingModule,
-    FontAwesomeModule
-
+    FontAwesomeModule,
+    HttpClientModule,
   ],
 
   exports: [
